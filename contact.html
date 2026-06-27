@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfred's Portfolio - Contact</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Page Header -->
+        <section class="about-section" style="text-align: center;">
+            <h2>Get In Touch</h2>
+            <p>
+                Have a question or want to collaborate? Feel free to reach out! I'm always happy to discuss new projects, opportunities, or just have a chat about web development.
+            </p>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="contact-container">
+            <div class="about-section">
+                <h3>Send me a Message</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number (Optional)</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" required placeholder="What is this about?">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" required placeholder="Tell me what you're thinking..."></textarea>
+                    </div>
+
+                    <button type="submit">Send Message</button>
+                </form>
+                <p style="font-size: 0.9rem; color: #7f8c8d; margin-top: 1rem;">
+                    * Required fields
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Information -->
+        <section class="contact-info">
+            <h2>Contact Information</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <!-- Email -->
+                <div class="info-item">
+                    <h4>📧 Email</h4>
+                    <p><a href="mailto:ngurealfred3@gmail.com" style="color: #3498db; text-decoration: none;">ngurealfred3@gmail.com</a></p>
+                    <p style="font-size: 0.9rem; color: #7f8c8d;">I typically respond within 24 hours</p>
+                </div>
+
+                <!-- Location -->
+                <div class="info-item">
+                    <h4>📍 Location</h4>
+                    <p>Kenya</p>
+                    <p style="font-size: 0.9rem; color: #7f8c8d;">Available for remote work worldwide</p>
+                </div>
+
+                <!-- Timezone -->
+                <div class="info-item">
+                    <h4>🕐 Timezone</h4>
+                    <p>East Africa Time (EAT) - UTC+3</p>
+                    <p style="font-size: 0.9rem; color: #7f8c8d;">Available for collaboration across timezones</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media Links -->
+        <section class="about-section" style="text-align: center;">
+            <h2>Connect With Me</h2>
+            <p>Follow me on social media or reach out through these platforms:</p>
+            <div class="social-links">
+                <a href="https://github.com" class="social-link" title="GitHub">
+                    <span style="font-size: 1.5rem;">💻</span>
+                </a>
+                <a href="https://linkedin.com" class="social-link" title="LinkedIn">
+                    <span style="font-size: 1.5rem;">🔗</span>
+                </a>
+                <a href="https://twitter.com" class="social-link" title="Twitter">
+                    <span style="font-size: 1.5rem;">🐦</span>
+                </a>
+                <a href="https://www.instagram.com" class="social-link" title="Instagram">
+                    <span style="font-size: 1.5rem;">📸</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Response Time Info -->
+        <section class="about-section" style="background-color: #e8f4f8; border-left: 4px solid #3498db;">
+            <h3 style="color: #2c3e50;">Response Time</h3>
+            <p>
+                I aim to respond to all inquiries within 24 hours. If you don't hear from me within that time, please feel free to send a follow-up message or reach out via email directly.
+            </p>
+            <ul style="list-style-position: inside; color: #555; margin-top: 1rem;">
+                <li>✓ Quick responses to general inquiries</li>
+                <li>✓ Flexible for project discussions</li>
+                <li>✓ Open to collaboration opportunities</li>
+                <li>✓ Available for mentoring and learning exchanges</li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Alfred Gakunju Ngure. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Highlight current page in navigation
+        document.querySelectorAll('nav a').forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+
+        // Handle form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Create mailto link
+            const mailtoLink = `mailto:ngurealfred3@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)}`;
+            
+            // Open default email client
+            window.location.href = mailtoLink;
+            
+            // Reset form after submission
+            this.reset();
+        });
+    </script>
+</body>
+</html>
