@@ -3,12 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alfred's portfolio</title>
+    <title>Alfred's Portfolio - Home</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>ALFRED GAKUNJU NGURE</h1>
-    <P>Am a student,currently studing programing in iyf academy. <br>I have a big interest in learning different programing languages so as to gain modern skils to solve modern problems.</P>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIY7FkMB6-oTxxLFy0Y4GVUN3IRFk54JNzjYSbc4u-Dw&s=10" alt="some of the programming languages"><br>my hobbies are 1. gaming 2. reading 3. travelling <br> 
-    <a href="mailto:ngurealfred3@gmail.com">send Email</a>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Alfred Gakunju Ngure</h1>
+            <p>Full Stack Web Developer in Training</p>
+            <p>Building modern web applications with passion and precision</p>
+            <div class="hero-links">
+                <a href="about.html" class="btn">Learn More About Me</a>
+                <a href="projects.html" class="btn secondary">View My Projects</a>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="about-section">
+            <h2>Welcome to My Portfolio</h2>
+            <p>
+                I'm a passionate student currently studying programming at IYF Academy. I have a strong interest in learning different programming languages to gain modern skills that solve real-world problems. I'm committed to building beautiful, functional, and user-friendly web applications.
+            </p>
+            <p style="margin-top: 1rem;">
+                My journey in tech has taught me the importance of continuous learning and adaptation. I'm particularly interested in web development, with a focus on both front-end and back-end technologies.
+            </p>
+        </section>
+
+        <!-- Quick Links -->
+        <section style="text-align: center; margin-top: 3rem;">
+            <h2>Get Started</h2>
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 2rem;">
+                <a href="about.html" class="btn">Learn About My Background</a>
+                <a href="projects.html" class="btn">Explore My Work</a>
+                <a href="contact.html" class="btn">Get in Touch</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Alfred Gakunju Ngure. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Highlight current page in navigation
+        document.querySelectorAll('nav a').forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>
