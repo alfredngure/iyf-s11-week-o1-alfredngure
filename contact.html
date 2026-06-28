@@ -70,95 +70,15 @@
                 <!-- Email -->
                 <div>
                     <h4>📧 Email</h4>
-                    <p><a href="mailto:ngurealfred3@gmail.com">ngurealfred3@gmail.com</a></p>
+                    <p><a href="mailto:ngurealfred3@gmail.com">Send Email</a></p>
                     <p>I typically respond within 24 hours</p>
                 </div>
-
-                <!-- Location -->
-                <div>
-                    <h4>📍 Location</h4>
-                    <p>Kenya</p>
-                    <p>Available for remote work worldwide</p>
-                </div>
-
-                <!-- Timezone -->
-                <div>
-                    <h4>🕐 Timezone</h4>
-                    <p>East Africa Time (EAT) - UTC+3</p>
-                    <p>Available for collaboration across timezones</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Social Media Links -->
-        <section>
-            <h2>Connect With Me</h2>
-            <p>Follow me on social media or reach out through these platforms:</p>
-            <div>
-                <a href="https://github.com" title="GitHub">
-                    <span>💻</span>
-                </a>
-                <a href="https://linkedin.com" title="LinkedIn">
-                    <span>🔗</span>
-                </a>
-                <a href="https://twitter.com" title="Twitter">
-                    <span>🐦</span>
-                </a>
-                <a href="https://www.instagram.com" title="Instagram">
-                    <span>📸</span>
-                </a>
-            </div>
-        </section>
-
-        <!-- Response Time Info -->
-        <section>
-            <h3>Response Time</h3>
-            <p>
-                I aim to respond to all inquiries within 24 hours. If you don't hear from me within that time, please feel free to send a follow-up message or reach out via email directly.
-            </p>
-            <ul>
-                <li>✓ Quick responses to general inquiries</li>
-                <li>✓ Flexible for project discussions</li>
-                <li>✓ Open to collaboration opportunities</li>
-                <li>✓ Available for mentoring and learning exchanges</li>
-            </ul>
-        </section>
-    </div>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2026 Alfred Gakunju Ngure. All rights reserved.</p>
-    </footer>
-
-    <script>
-        // Highlight current page in navigation
-        document.querySelectorAll('nav a').forEach(link => {
-            if (link.href === window.location.href) {
-                link.classList.add('active');
-            } else {
-                link.classList.remove('active');
-            }
-        });
-
-        // Handle form submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-            
-            // Create mailto link
-            const mailtoLink = `mailto:ngurealfred3@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)}`;
-            
-            // Open default email client
-            window.location.href = mailtoLink;
-            
-            // Reset form after submission
-            this.reset();
-        });
-    </script>
+    </footer>    
+  
 </body>
+/html>
 </html>
